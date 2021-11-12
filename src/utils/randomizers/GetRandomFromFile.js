@@ -1,8 +1,7 @@
 const RandomNumber = require('./RandomNumber');
 const jsonfile = require('jsonfile');
-const file = __dirname + '/../data/locais.json';
 
-async function randomLocale(){
+async function GetRandomFromFile(file){
     try{
         let obj = await jsonfile.readFile(file);
         let randomNum = RandomNumber(0,(obj.length - 1));
@@ -11,6 +10,6 @@ async function randomLocale(){
         return 'error';
     }
 }
-module.exports = randomLocale;
+module.exports = {GetRandomFromFile};
 
 
