@@ -18,7 +18,7 @@ module.exports = {
         let locais = __dirname + '/data/locais.json';
         let local = await GetRandomFromFile.GetRandomFromFile(locais);
         if(local == "random"){
-            let randomIdeas = __dirname + '/data/random-ideas.json';
+            let randomIdeas = __dirname + '/data/randomdsd-ideas.json';
             date = await GetRandomFromFile.GetRandomFromFile(randomIdeas);
         }else{
             date["local"] = local;
